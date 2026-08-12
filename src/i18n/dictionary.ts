@@ -59,6 +59,23 @@ export type Dictionary = {
     titleLines: readonly string[];
     description: readonly string[];
   };
+  pricing: {
+    label: string;
+    titleLines: readonly string[];
+    packages: readonly {
+      number: string;
+      tier: string;
+      title: string;
+      price: string;
+      description: string;
+      includesLabel: string;
+      includes: readonly string[];
+      timelineLabel: string;
+      timeline: string;
+    }[];
+    note: string;
+    cta: string;
+  };
   contact: {
     label: string;
     titleLines: readonly string[];

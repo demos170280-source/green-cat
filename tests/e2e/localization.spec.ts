@@ -13,6 +13,15 @@ for (const locale of ["en", "ru"] as const) {
     await expect(page.getByRole("heading", { level: 1 })).toHaveAccessibleName(hero);
     await expect(page.getByRole("heading", { level: 2, name: work })).toBeVisible();
     await expect(page.locator(".project-teaser")).toHaveCount(3);
+    await expect(page.locator("#pricing")).toBeAttached();
+    await expect(page.locator(".pricing-package")).toHaveCount(3);
+    await expect(page.locator(".pricing-package h3").first()).toHaveText(
+      locale === "en" ? "One-page website" : "Одностраничный сайт",
+    );
+    await expect(page.locator(".pricing-cta")).toHaveAttribute(
+      "href",
+      "https://e.mail.ru/compose?to=demos80@list.ru",
+    );
     await expect(page.locator(".hero-cta")).toBeVisible();
 
     if (isMobile) {

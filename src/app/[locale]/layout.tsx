@@ -13,6 +13,7 @@ import "@/styles/work.css";
 import "@/styles/services.css";
 import "@/styles/studio.css";
 import "@/styles/studio-section.css";
+import "@/styles/pricing.css";
 import "@/styles/contact.css";
 import "@/styles/footer.css";
 import "@/styles/motion.css";

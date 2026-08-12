@@ -11,12 +11,12 @@ type RevealGroup = {
 const revealGroups: readonly RevealGroup[] = [
   {
     selector:
-      ".work-kicker, .services-kicker, .studio-process-kicker, .studio-section-kicker, .contact-kicker",
+      ".work-kicker, .services-kicker, .studio-process-kicker, .studio-section-kicker, .pricing-kicker, .contact-kicker",
     delay: 0,
   },
   {
     selector:
-      ".work-heading h2, .services-heading h2, .studio-process-intro h2, .studio-section-copy h2, .contact-intro h2",
+      ".work-heading h2, .services-heading h2, .studio-process-intro h2, .studio-section-copy h2, .pricing-heading h2, .contact-intro h2",
     delay: 100,
   },
   {
@@ -25,6 +25,7 @@ const revealGroups: readonly RevealGroup[] = [
     delay: 200,
   },
   { selector: ".service-card", delay: 0, stagger: 120 },
+  { selector: ".pricing-package", delay: 0, stagger: 120 },
 ];
 
 export function ScrollReveal() {

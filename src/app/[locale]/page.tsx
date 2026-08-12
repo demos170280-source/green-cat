@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/layout/hero";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
 import { SiteNavigation } from "@/components/navigation/site-navigation";
+import { Pricing } from "@/components/pricing/pricing";
 import { Services } from "@/components/services/services";
 import { Studio } from "@/components/studio/studio";
 import { StudioProcess } from "@/components/studio/studio-process";
@@ -37,6 +38,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <Services dictionary={dictionary} />
         <StudioProcess dictionary={dictionary} />
         <Studio dictionary={dictionary} />
+        <Pricing dictionary={dictionary} />
         <Contact dictionary={dictionary} locale={locale} />
       </main>
       <Footer dictionary={dictionary} locale={locale} />
