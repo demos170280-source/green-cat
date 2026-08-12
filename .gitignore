@@ -1,0 +1,33 @@
+# dependencies
+/node_modules
+
+# Next.js
+/.next
+/out
+
+# production
+/build
+
+# tests
+/coverage
+/playwright-report
+/test-results
+
+# local environment
+.env*
+!.env.example
+
+# editors and operating systems
+.DS_Store
+Thumbs.db
+.idea
+.vscode/*
+!.vscode/extensions.json
+
+# logs
+*.log
+*.tsbuildinfo
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo

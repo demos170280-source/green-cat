@@ -1,0 +1,374 @@
+# Green Cat — Web Design System
+
+This document defines the default design principles for Green Cat projects.
+
+It is a direction, not a rigid template.
+
+Each project must still develop its own visual identity.
+
+---
+
+## 1. DESIGN PHILOSOPHY
+
+Green Cat websites should feel:
+
+- contemporary
+- intentional
+- clean
+- visually confident
+- premium where appropriate
+- editorial rather than template-driven
+- technically precise
+
+Avoid the appearance of generic website builders
+or automatically generated AI interfaces.
+
+---
+
+## 2. COMPOSITION
+
+Use strong visual hierarchy.
+
+Prefer:
+
+- large visual statements
+- controlled whitespace
+- asymmetric compositions when appropriate
+- clear focal points
+- strong image placement
+- deliberate contrast between large and small elements
+
+Do not fill every available area with content.
+
+Empty space is part of the composition.
+
+---
+
+## 3. GRID
+
+Use full-width sections with controlled inner content.
+
+Typical desktop container:
+
+max-width: 1440–1600px
+
+Horizontal padding should respond to viewport size.
+
+Example direction:
+
+Mobile:
+20–24px
+
+Tablet:
+32–40px
+
+Desktop:
+48–64px
+
+Large desktop:
+64–96px
+
+These values are guidelines, not mandatory constants.
+
+---
+
+## 4. TYPOGRAPHY
+
+Typography should be one of the primary visual elements.
+
+Use a clear hierarchy:
+
+Display
+H1
+H2
+H3
+Body
+Small
+Caption
+
+Large headings may use tight tracking.
+
+Display typography may use:
+
+line-height: 0.85–1.0
+
+Body copy should remain highly readable.
+
+Avoid too many font weights.
+
+Usually:
+
+Regular
+Medium
+Semibold
+Bold
+
+are sufficient.
+
+---
+
+## 5. HERO SECTIONS
+
+The Hero should establish the identity of the entire project.
+
+It should answer quickly:
+
+- What is this?
+- Why should I care?
+- What should I do next?
+
+Avoid automatically using:
+
+headline
++
+paragraph
++
+two buttons
++
+dashboard screenshot
+
+for every project.
+
+Explore compositions appropriate to the brand.
+
+The Hero may use:
+
+- typography
+- photography
+- product visualization
+- 3D object
+- video
+- editorial composition
+- interactive visual
+- abstract graphic system
+
+The visual should support the message.
+
+---
+
+## 6. COLOR
+
+Use restrained color systems.
+
+Prefer:
+
+1 dominant background
+1 primary text color
+1 secondary text system
+1 accent
+optional functional colors
+
+Do not add colors simply to make the interface look more complex.
+
+Accent colors should have a clear role.
+
+---
+
+## 7. IMAGERY
+
+Images should feel curated.
+
+Maintain consistency in:
+
+- lighting
+- perspective
+- color temperature
+- contrast
+- composition
+- crop
+- subject scale
+
+For AI-generated imagery, maintain one visual language
+throughout the project.
+
+Avoid obvious generic stock imagery whenever possible.
+
+---
+
+## 8. CARDS
+
+Do not automatically place every piece of information inside a card.
+
+Use cards only when they provide meaningful grouping.
+
+Consider alternatives:
+
+- typography
+- dividers
+- columns
+- image composition
+- whitespace
+- full-width layouts
+- editorial structures
+
+If cards are used, maintain a consistent:
+
+- radius
+- border
+- background
+- padding
+- hover behavior
+
+---
+
+## 9. BUTTONS
+
+Establish:
+
+Primary
+Secondary
+Text / tertiary
+
+Primary buttons should clearly indicate the main conversion.
+
+Avoid excessive CTA duplication.
+
+Buttons must have:
+
+- hover state
+- focus state
+- disabled state when relevant
+
+Touch targets must remain usable on mobile.
+
+---
+
+## 10. NAVIGATION
+
+Navigation should remain simple.
+
+Desktop navigation may be:
+
+- full-width
+- centered
+- floating
+- transparent over Hero
+- solid after scroll
+
+depending on the project.
+
+Mobile navigation must be intentionally designed,
+not merely hidden desktop navigation.
+
+---
+
+## 11. MOTION
+
+Motion language should be consistent.
+
+Preferred motion characteristics:
+
+subtle
+smooth
+controlled
+premium
+purposeful
+
+Typical durations:
+
+Micro interaction:
+150–300ms
+
+UI transition:
+250–500ms
+
+Section reveal:
+500–900ms
+
+Ambient animation:
+5–20s
+
+Avoid making every object move.
+
+---
+
+## 12. RESPONSIVE DESIGN
+
+Mobile is not a reduced desktop screenshot.
+
+At smaller widths reconsider:
+
+- composition
+- information priority
+- heading scale
+- content order
+- navigation
+- images
+- animation
+- spacing
+
+Important visual concepts should survive the transition
+from desktop to mobile.
+
+---
+
+## 13. SECTION RHYTHM
+
+Avoid identical spacing between every section.
+
+Create rhythm.
+
+For example:
+
+large section
+↓
+compact information section
+↓
+visual section
+↓
+large editorial section
+↓
+CTA
+
+The page should have pacing.
+
+---
+
+## 14. VISUAL EFFECTS
+
+Effects may include:
+
+- blur
+- glow
+- gradient
+- glass
+- noise
+- grain
+- masks
+- shadows
+
+Use them only when appropriate to the project's art direction.
+
+Effects are not a substitute for composition.
+
+---
+
+## 15. ACCESSIBILITY
+
+Design must remain usable.
+
+Maintain:
+
+- readable contrast
+- sufficient text sizes
+- visible focus states
+- understandable controls
+- usable touch targets
+- logical content order
+
+---
+
+## 16. GREEN CAT RULE
+
+Never ask:
+
+"How can we make this look more impressive?"
+
+before asking:
+
+"What should the user notice first?"
+
+Visual impact must follow hierarchy and purpose.
+
+A strong Green Cat interface should look designed,
+not decorated.
