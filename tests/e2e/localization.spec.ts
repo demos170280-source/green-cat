@@ -15,12 +15,12 @@ for (const locale of ["en", "ru"] as const) {
     await expect(page.locator(".project-teaser")).toHaveCount(3);
     await expect(page.locator("#pricing")).toBeAttached();
     await expect(page.locator(".pricing-package")).toHaveCount(3);
-    await expect(page.locator(".pricing-package h3").first()).toHaveText(
+    await expect(page.locator(".pricing-package h3").first()).toHaveAccessibleName(
       locale === "en" ? "One-page website" : "Одностраничный сайт",
     );
     await expect(page.locator(".pricing-cta")).toHaveAttribute(
       "href",
-      "https://e.mail.ru/compose?to=demos80@list.ru",
+      "mailto:demos80@list.ru",
     );
     await expect(page.locator(".hero-cta")).toBeVisible();
 
@@ -69,4 +69,36 @@ test("disables motion when reduced motion is requested", async ({ page }) => {
 
   await expect(page.locator(".accent-square").first()).toHaveCSS("animation-name", "none");
   await expect(page.locator(".hero-cta")).toHaveCSS("transition-duration", "1e-05s");
+});
+
+test("keeps service and pricing titles on a consistent two-line rhythm", async ({ page }) => {
+  await page.goto("/ru");
+
+  const serviceTitles = page.locator(".service-card h3");
+  const pricingTitles = page.locator(".pricing-package h3");
+
+  await expect(serviceTitles).toHaveCount(4);
+  await expect(pricingTitles).toHaveCount(3);
+
+  for (const title of await serviceTitles.all()) {
+    await expect(title.locator(":scope > span")).toHaveCount(2);
+  }
+
+  for (const title of await pricingTitles.all()) {
+    await expect(title.locator(":scope > span")).toHaveCount(2);
+  }
+
+  const metrics = await page.evaluate(() => ({
+    serviceTitleHeights: [...document.querySelectorAll(".service-card h3")].map(
+      (element) => element.getBoundingClientRect().height,
+    ),
+    pricingTitleHeights: [...document.querySelectorAll(".pricing-package h3")].map(
+      (element) => element.getBoundingClientRect().height,
+    ),
+    overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+  }));
+
+  expect(new Set(metrics.serviceTitleHeights).size).toBe(1);
+  expect(new Set(metrics.pricingTitleHeights).size).toBe(1);
+  expect(metrics.overflow).toBe(0);
 });

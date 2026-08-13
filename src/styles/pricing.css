@@ -106,11 +106,16 @@
 }
 
 .pricing-package h3 {
+  block-size: calc(2 * var(--text-h3) * var(--leading-h3));
   margin-top: var(--space-element-md);
   font-size: var(--text-h3);
   font-weight: var(--weight-h3);
   letter-spacing: var(--tracking-h3);
   line-height: var(--leading-h3);
+}
+
+.pricing-package h3 span {
+  display: block;
 }
 
 .pricing-price {

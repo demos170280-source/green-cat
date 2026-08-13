@@ -36,7 +36,11 @@ export function Pricing({ dictionary }: PricingProps) {
                 <span aria-hidden="true">—</span>
                 <span>{item.tier}</span>
               </p>
-              <h3>{item.title}</h3>
+              <h3>
+                {item.title.split(" ").map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </h3>
               <p className="pricing-price">{item.price}</p>
               <p className="pricing-description">{item.description}</p>
 

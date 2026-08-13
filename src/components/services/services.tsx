@@ -26,7 +26,11 @@ export function Services({ dictionary }: ServicesProps) {
             <li className="service-card" key={service.number}>
               <header className="service-card-heading">
                 <span className="service-number">{service.number}</span>
-                <h3>{service.title}</h3>
+                <h3>
+                  {service.title.split(" ").map((line) => (
+                    <span key={line}>{line}</span>
+                  ))}
+                </h3>
               </header>
 
               <ul className="service-details">
