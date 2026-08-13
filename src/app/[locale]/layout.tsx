@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, locales } from "@/i18n/config";
+import { createLocalizedMetadata } from "@/lib/seo";
 
 import "@/styles/global.css";
 import "@/styles/design-system.css";
@@ -24,8 +25,6 @@ type LocaleLayoutProps = Readonly<{
   params: Promise<{ locale: string }>;
 }>;
 
-const siteUrl = process.env.SITE_URL || "http://localhost:3000";
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -41,20 +40,12 @@ export async function generateMetadata({
 
   const dictionary = await getDictionary(locale);
 
-  return {
-    metadataBase: new URL(siteUrl),
-
+  return createLocalizedMetadata({
+    locale,
     title: dictionary.metadata.title,
     description: dictionary.metadata.description,
-
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        en: "/en",
-        ru: "/ru",
-      },
-    },
-  };
+    includeKeywords: true,
+  });
 }
 
 export default async function LocaleLayout({
