@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 
 import type { Locale } from "@/i18n/config";
 
-export const SITE_URL = (
-  process.env.SITE_URL ?? "https://www.greencat.site"
-).replace(/\/$/, "");
+export const SITE_URL = "https://greencat.site";
 
 const siteName = "Green Cat";
 const openGraphImage = {
